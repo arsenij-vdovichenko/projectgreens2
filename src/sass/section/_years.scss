@@ -1,0 +1,79 @@
+
+@use "../base/variable" as *;
+
+.years {
+    &__title {
+        color: #000;
+        position: relative;
+        font-size: 16px;
+        font-family: "Montserrat Alternates";
+        font-weight: 400;
+        margin-bottom: 40px;
+        text-align: center; 
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 536px;
+            height: 1px;
+            background-color: #000;
+            top: 167px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        /* Змінюємо center на flex-start, щоб ігнорувати твій margin-bottom 72px */
+        align-items: flex-start; 
+        justify-content: space-around;
+        margin-top: 36px;
+        position: relative;
+    }
+
+    &__input {
+        width: 200px;
+        height: 30px;
+        padding: 9px 45px 9px 12px; 
+        border-radius: 20px;
+        background: #D7D7D7;
+        border: none;
+        box-shadow: 0 8px 25px rgba(70, 70, 70, 0.4);
+        font-family: "Montserrat Alternates";
+        outline: none;
+        margin-bottom: 72px; // Твій марджин лишається
+        &::placeholder {
+            color: #7E7E7E;
+            font-weight: 400;
+        }
+    }
+
+    &__text {
+        color: #039900;
+        font-family: "Montserrat Alternates";
+        font-weight: 400;
+        line-height: normal;
+        /* Додаємо 15px зверху, щоб текст став точно на рівні центру інпута */
+        margin-top: 15px; 
+    }
+
+    &__btn {
+        position: absolute;
+        right: -3px;
+        width: 48px;
+        height: 48px;
+        border: none;
+        background: #000;
+        border-radius: 0 30px 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0.5px;
+    }
+
+    &__input-wrap {
+        position: relative;
+        width: 260px; 
+    }
+}

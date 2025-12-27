@@ -1,0 +1,80 @@
+
+@use "../base/variable" as *;
+
+
+
+.calculatetime{
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.calculatetime__title{
+  text-align: center;
+  font-family: "Montserrat Alternates";
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.calculatetime__search-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  width: 520px;
+  margin: 0 auto;
+}
+
+
+ .calculatetime__search{
+  position: relative;
+  background: #E6E6E6;
+  border-radius: 30px;
+  height: 48px;
+  width: 300px;
+}
+
+.calculatetime__input{
+  position: absolute;
+  left: 20px;
+  right: 48px;
+  top: 0;
+  bottom: 0;
+  border: none;
+  background: transparent;
+  font-family: "Montserrat Alternates";
+  font-size: 16px;
+  color: #7E7E7E;
+  outline: none;
+}
+
+.calculatetime__btn{
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: #000;
+  border-radius: 0 30px 30px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculatetime__icon{
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+.calculatetime__separator{
+  width: 140px;
+  height: 1px;
+  border-bottom: 1px dashed #000;
+}
+
+.calculatetime__timer{
+  font-family: "Montserrat Alternates";
+  font-size: 18px;
+  color: #000;
+  white-space: nowrap;
+}

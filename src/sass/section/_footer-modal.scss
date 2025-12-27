@@ -1,0 +1,88 @@
+
+@use "../base/variable" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__content {
+  position: relative;
+ width: 463.0px;
+ height: 245.0px;
+  padding: 60px 40px;
+  background: #fff;
+  border-radius: 30px;
+  text-align: center;
+
+  transform: scale(0.7) translateY(50px);
+  transition: transform 0.4s ease;
+}
+
+.modal.active .modal__content {
+  transform: scale(1) translateY(0);
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal__title {
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: normal;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+}
+
+.modal__icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 46px;
+  justify-items: center;
+}
+
+.modal__icons img:nth-child(1){
+    transform: translateX(-50px);
+  
+}
+
+.modal__icons img:nth-child(2){
+    transform: translateX(50px);
+  
+}
+
+.modal__icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.modal__icons img:hover {
+  transform: scale(1.2) rotate(5deg);
+}

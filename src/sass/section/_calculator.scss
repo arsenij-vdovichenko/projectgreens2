@@ -1,0 +1,88 @@
+
+@use "../base/variable" as *;
+
+
+.calculator{
+
+    // padding-top: 62px;
+
+   
+
+  &__content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+    &__title{
+        color: #000;
+        font-family: "Montserrat Alternates";
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 36px;    
+        position: relative;
+        text-align: center;
+        padding-top: 62px;
+        &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 536px;
+      height: 1px;
+      background-color: #000;
+      top: 255px;
+    }
+        
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img{
+        width: 27px;
+        padding: 10px, 5px;
+        cursor: pointer;
+    }
+
+        &__input {
+        width: 150.0px;
+        height: 35.0px;
+        padding: 10px;
+        border-radius: 20px;
+        background: #D7D7D7;
+        border: none;
+        box-shadow: 0 8px 25px rgba(70, 70, 70, 0.4); 
+        transition: all 0.3s ease;
+
+        &::placeholder{
+        color: #7E7E7E;
+        font-family: "Montserrat Alternates";
+        font-weight: 400;
+        }
+    }
+
+    
+   
+  &__input--first {
+    margin-right: 38px;
+    margin-left: 175px;
+  }
+
+
+  &__input--second {
+    margin-right: 38px;
+  }
+
+ &__input--result{
+    margin-left: 38px;
+ }
+
+  &__box--second{
+    margin-right: 58px;
+  }
+ 
+}
