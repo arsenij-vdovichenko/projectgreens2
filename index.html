@@ -1,69 +1,416 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Vite_vanilla-app-template/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vanilla App Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <script type="module" crossorigin src="/Vite_vanilla-app-template/assets/index-99a6ec52.js"></script>
-    <link rel="stylesheet" href="/Vite_vanilla-app-template/assets/index-66886d44.css">
+    <script type="module" crossorigin src="/projectgreens2/commonHelpers.js"></script>
+    <link rel="stylesheet" href="/projectgreens2/assets/index-875b70be.css">
   </head>
   <body>
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/Vite_vanilla-app-template/assets/javascript-8dac5379.svg" alt="" />
-    </section>
+ 
 
     <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
+    
+    
+<section class="header">
 
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
-        </li>
-      </ul>
+
+<div class="container">
+    <a href="" class="header__link">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAnCAYAAAB5XdqFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAI5SURBVHgB7ZjfTeNAEId/yl0BuQ58D3m+dJB9zBt0gDvIXQUHFQAVeDqADggVAE+R8pJQAZAGzAw7K0wUkv0zCiDxSSM7y6z5sh7vbvwDtlxx3HMs8cmp4WW/BCL6d8vfHccQH0SlAZU4lZP5fN7MZjPXaZcvcdPJjeYnbDjkmOj5lOOEJYdt29a9Xm/Jn/scDccxxzkysBI905BRG6mYHMGiUz7ccfzmeEQmPdghcjKyjuNWzx8Hg8E1H/9zPMDf+onmJmElKlJSe384/knDarVyfOun8PUoU9Yv+FGvckStkBEbdT47jnY8Hh/BSy207dMhT32L12moxh7nVxmZKjJXymCx1iaiB5nXi0ZG5kFjFxX8aDZr7X28rc2FXs9s8g+S8s9PI/IPNfdgRx5pnolsV7KJ7NNofhWRSzCQzZEU5JbeJOQTCmRzJYeIL5EuhAzZXEmh1n4jpENIkC2RFC60by6ECNlSSeB1PS+BsEXWQtJp/wnKIWyQtZAUJni7bJZCWJNdaMMFyrhC3MqVQqj5l+sSyifdPmy+bJeNKyKhTNZp/yPYsLUcCfmyYVtXoZyoZ4aQJ7tpW5dD0oNNSJOtYi+8g6zZhxAvWyNuW7eNoimSECcbtnW5P9hM5nHCblmpzdxl02qxeYHwvmzuti70NZMMEDorRIewbI6QTlgRoyRjX+nU8JLLtXYH/5rmGulcat8T7AGLbV0UJa90HPyTfok9UCIa6jLntidTIvoEX7O3+OYL8gzSWdmGNbs0fgAAAABJRU5ErkJggg==" alt="" class="header__logo">
+        <ul class="header__list">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAjCAYAAAAAEIPqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKsSURBVHgB7VgxltMwEP1rtoAKU7EdooNqc4OIiu3IniC+QfYGgRNsOEHCCbKUVJgTbPYE6xK6UEG3aJ5G0ViOHD/beYRH/nv/SZZGo7E0Ho0MHHFEY2jDCVOjG76K+q3hAD3hhEtlODdcG95wm+b2N2iHe8OXXB8afkNPOOXyGtbYj6LvE6zRDin86q8Mi0DXgEntedD3TNQ1j1c18uFcDiSLhAemgcElIZ5gafiCSVs/FnIzw6nhA7dfB3rk85h1TSLyA9bv5pqz7qFUmHFjHe5RXfVbLjNWLHHFY+R4hzmqL+WM3DaX698sUiKMiIH6CpTdgXw/h337c8NFMGaBetwEzwWsodvmqsgn3DBCveEq0raO9NfpqsM6Mlcp8iQsSP48R9UF3nO9QNmHFSuiiPAZ1h3k2Cu0h7TFud9ICrjoMWPjl1ymXC64vIT1wwx+C10ozA0/wPt1yvreoR1m8N+Jc8NZk4Ftt7cPbJubXmATPU4jA9f4eyBXIFekb+0nvLGbw+kEhwkFG5WcK/Z2mh5xxP8GjXj46oQE+wOFrfOgjRKzHB2xT6MLwzvxrOCP/k7Yp9EK5XyEVj5HNYOLIXoqdzVawxozDiZRsDcOd5rRKUc3oaYnrUKN73cxmjK5BzaGtlyLPqrLmxD5doHmINnLWGcXo5/C+2cBn6gr2JeBeF6JuoOG/TC16KMrmEuBp6J9inJq3BrbcmZyEbmtGcpXqwze8AnXXQrr5EbcPg7aFfcNHqE9vsOuwBPDM9gVewubW/9mGfLhx/BRZCXGUCR5bfiKqeAT/wvWccHznPGY54Zf0AMU/I2+KdKgLp+XKL8AYYgef/b0jQzWbWqxzzjdBvQbYWdYPCSjM9jwuROHZLQLk//UStNHRyHtbpdgl5DXN34Y/kIDo/8ATLWN16qEqBEAAAAASUVORK5CYII=" alt="coding-magic " class="header__img-coding-magic">
+            <!-- <p class="header__coding">Coding</p>
+            <p class="header__magic">Magic</p> -->
+        </ul>
+    </a>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="link theme-text">Інтерактив ▼</a></li>
+            <li class="nav__item"><a href="#" class="link theme-text">Наша команда</a></li>
+            <li class="nav__item"><a href="#" class="link theme-text">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <div class="hellow">
+        <input class="hellow__input" type="checkbox" name="btn" id="hellow__btn">
+        <label class="hellow__label" for="hellow__btn">
+            <img class="hellow__sun" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADkSURBVHgBnZMxCsJQDIZT6+LgIO4iLiIIgidQ8AqewVFw0a3VCzjr5BkcFfEQLk6u4qKg4KTWPzSFx6NpSwMffSUkf/70lSg5fsChnOGDAGyzFtylYKTke+AJHlqDpTQogo2cGbbhAVfOC62BI3yM4sBq5NpFBeMcGEqawFhLHEFLUbanqIEDWcpMJUODaEf8/EYWeII66IILJccbDEBHs9pIUW/bBeYSS+JvTvHhy7RNJU97CpcUXaQ1uIIdKIO+5E/aBFUwBCt5v4EJOIMXhV9qRuE9yRSsyL6nlDPYr0cpf+MfOlVJycS+bXMAAAAASUVORK5CYII=" alt="">
+            <img class="hellow__monthn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAYAAADtc08vAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADgSURBVHgBpZE9CsJAEIV3xUpYsBRP4Q20SyMhrb3kDtZWdrmBlY2tB0guoBcwomnTBAIhf+6OYwwiiRuz5sGwMMz33uwuIRWlaboAAJuoKoqiMYJXLECTtRLs+/4IuQBKEVVxzi/wISUY52dQkaqB3dUgqBp4njdvy1NJIlBK+3iKXwY9rJvE+N7A0TAMD4VBkiQ7It+O4+DGMIzhs6HrOnNd18K+YIy9AkzTHMB/mr6j8jy3FOFtbV0hxKkNiXNHIlMcx8sGNsBNV7Xkb0bl/SZYxeNlWXbWNG3vOE7tZx6vb1onO73jNAAAAABJRU5ErkJggg==" alt="">
+        </label>
+        <p class="hellow__text theme-text">Вітаємо, <span class="hellow__span theme-text">User!</span></p>
     </div>
 
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/Vite_vanilla-app-template/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
+        
+
+</div>
+
+
+</section>
+
+    
+<section class="popular__games">
+    <div class="container">
+        <div class="popular__games__box">
+        <h2 class="popular__games__title theme-text">Популярні інетрактивні ігри</h2>
+        </div>
+    </div>
+</section>
+
+    
+<section class="years">
+    <div class="container">
+    <h2 class="years__title theme-text">Перевір в який рік ти народився</h2>
+ <div class="years__box">
+
+    <div class="years__input-wrap">
+        <input
+            type="text"
+            placeholder="Введіть рік народження"
+            class="years__input"
+        >
+        <button class="years__btn" type="button">
+            <img src="/projectgreens2/assets/find-9ba5f54c.svg" alt="">
+        </button>
+    </div>
+
+    <p class="years__text" >Ви народилися у високосний рік!</p>
+
+</div>
+    </div>
+</section>
+
+    
+<section class="guessnumbers">
+    <div class="container">
+
+        <h1 class="guessnumbers__title theme-text"> Вгадай число, яке загадав комп’ютер</h1>
+
+        <div class="guessnumbers__boks">
+
+            <div class="guessnumbers__input-wrap">
+                <input type="text" placeholder="Введіть число" class="guessnumbers__input">
+                <button class="guessnumbers__btn" type="button">
+                    <img src="/projectgreens2/assets/find-9ba5f54c.svg" class="guessnumbers__img" alt="Пошук"
+                    >
+                </button>
+            </div>
+
+
+            <p class="guessnumbers__text"> Вітаю, ви вгадали число! (number)</p>
+
+        </div>
+
+    </div>
+</section>
+
+    
+<section class="paper">
+    <div class="container">
+        <h2 class="paper__title theme-text">Камінь - ножиці - папір</h2>
+
+     <div class="paper__content">
+    <div class="paper__box">
+        <img src="data:image/png;base64,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" alt="stone" id="stone" data-choice="stone" class="paper__img">
+        <img src="data:image/png;base64,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" alt="scissors" id="scissors" data-choice="scissors" class="paper__img">
+        <img src="data:image/png;base64,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" alt="paper" id="paper" data-choice="paper" class="paper__img">
+    </div>
+
+    <div class="paper__score">
+        <p class="paper__text theme-text">Рахунок:</p>
+        <p class="paper__text theme-text" data-score="computer">Комп’ютер - 0</p>
+        <p class="paper__text theme-text" data-score="player">Ви - 0</p>
+    </div>
+</div>
+        
+        <p class="paper__win" >Ви виграли раунд!</p>
+        
+        <button type="button" class="paper__button " >Варіант комп’ютера</button>
+
+
+    </div>
+</section>
+
+    
+<section class="calculator">
+    <div class="container">
+        <h1 class="calculator__title theme-text">Калькулятор</h1>
+
+     <div class="calculator__content">
+    <input type="text" class="calculator__input calculator__input--first" placeholder="Введіть перше число">
+
+    <div class="calculator__box calculator__box--first">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHdSURBVHgBvZaxTsMwEIavIUOHDhkYGJDqgQcoGxuwIcELMMHCXPEEbZ+gSIwMvADsbFWHLgiJDgwMSEkRQwekItEhQ6Vyl5zh6pLGSdP+0qdcHJ1/X2zHAVgsDzlHbhEfGSFTg2d+fgYFiAybCUaL8DkvlxR3MF0Cn/uxVg2yV5nEiPuzqrQoU2mu0oz9gk3la99MMm2uyFRzg1TWWa3mGzlCytrQgXifKlitqNp9EIvN4YZ1iEypYqWNrZa8VLvdhhzSPtuIm8u4VsucQtKLy0U81zbL8zyo1+tRrJSCRqMRxa1Wy7YLuaqj7WX90ahWqxGdTuc3ts1lDpg9qvgL4kMhVYPB4N/YUm8idjcgnuNMkxYEQR7jR6THsUOLqwsZ1e1mTiH15U0J4tfsg+Xrzqkhcirux1QxzfEVrFYPxv24xAFVS78wCoqXWS3p1eGAqj7ka5EaI5dGW0iDcURDULC5Nh0a7dG9YzTSytvlQSwj6vwCZvcuKdR9lxIS6RS5Rk6QLbAXVXmH3HMsNUGe2DzRmETfVvqwHPN1hzGNiD7Tg3lDbdqXzxYZk8rwd47mVcimoWzcSEmikX6IQVifZpz7jrxwPKO0ik3RfNOer8D8z9uEoV3xyddJUkc/nU4LVv4m+VYAAAAASUVORK5CYII=" alt="plus" class="calculator__img">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG3SURBVHgBvZY9TsNAEIUnIUWKFClSUCDFBQcwJ0B0SHABKmioI98gR0CipOAC0FNCQYeECwqKSMaIIgVSLOHChaUwz54lyyr+jZ0nffLuJrvP451ZmyhfQ+aCuWU8ZsEshVcZP6cGBKOpYZCHJ/+vJUsWWNbAk/mlZVeIKouFrFMqsk3NdFOryNBryEx/vKMss2nDZoobZrCN6BQ/zDHTV0ZdSuvMonaE6A5JS6KuDLQpmCFCSxmWSuENDaE9prcNQ5U0PWbYpfalZ+kIrgGlZ2eubNumyWSStIMgIMdxqIaGHapw/o3H47+27/tUUjPmUtoxInyktDQKVcHENFRKkuaJ2pWrd/BIsX8eldjHGpozZ1o/RIRImitqRw9GP+xIA9Hhk8Gi5mRGB72rOkSUR3JtQiFj1k2Em9AL/6MhU2U2N8aTvnnSIKMOxLyOsChqbmaMR2rNTsZEnO7XzCmzS8VCVHfMvbR1xcyLmGYaQjgDcbCfyHVfUAbAFZ7XGCkzV/8tzxDq0+p9VlWRmEX64E7BJNzhl2beo2JhzifzJu1/KorQFPYTNTug1WsnFpDd33KNsxb4BWFH1lFRvrHgAAAAAElFTkSuQmCC" alt="minus" class="calculator__img">
+      </div>
+      <div class="calculator__box calculator__box--second">
+     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHZSURBVHgBvZavTsNQFMa/lYmJJatAIBAVCORwc6yOBMQsCgya8ATbG4wFieAFwCNBIEhI6BIEgqQLQUyQrAkTFUvGOdu54a7Q9bZr+ZIv9892769n59zbActlk4/JV2SfPCJPxc8yf4QcxKBOBLDMvnw/kxzZYJrBvqw3Vj1FVHEeyT5Gka0K06FOEtDPCab/vOtxsE7OMOVLcvU/olP+Iu+RKwpkYX7OHBiq2+0ihTi6XWhFtEY+hUFVtdttuK6LRqOBZrOJfr+PIAhgoDH5UfqBBcMS7vV6qNVqqNfr8DwPg8EAhlL7b5LLZRgCOSqG2rY9gzmOYwpVRcMsvsHSFUKr1cpSPE3xdgnzQ2qjWLnShpxDo8yvoDetX2bgHYrVL+A9ipWnDziHnD8fxeRxSD7UxmOVw3MUo9vIeFySDkfHfxkc5KdodKxXSzocpYv8Kpavs7PIXMgPYWkTg5ygCjaMzM/GVmSSK2pH4FnEm55g8SiwQrVnKWYhv78uyAfkDSSLo7om30hf14T8JNBYIIsvXb7Y96XdEisA2xM//AFSME//bBmQVRFYBekVCizUJ9cSFvETfmjwMpLFa97JL9JfUFKEUXE++cxW8fOem4i5uj+lncRt8A1bEQGFX52P5AAAAABJRU5ErkJggg==" alt="multiplication" class="calculator__img">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH0SURBVHgBrZWxTsJQFIaPwMDA0IHBsYMPUDcHk9bNRBNYnWTxAXwDNh/A0aE8gCYydqIMbibUxMHBpI0xkcEIiQwdSPCcem64VNveW/onH20v99y/5/TcFiBfBtJDXCREZsiKmfD4OVQgMuqnDPIIeX4pmbzAqgQhxyvL0sgqixmvo5TZtmayqVlkGFZkJpe3nWXW11nMMIwEhbk3SGvr7FzXXdm2rTL3GzlGmrJZT8eMGI1GOvOvkANhVkNs0JDjOBAEgU6IxRmaYmAC6neblNOyLJ0MP+g+kUOkUQPFPSOEzaKboWiaBoXXNAKh2+2C7/ugKblL22Q4B0V1Oh0YDoewhQxlQyqlaZoQRRFo6lU6T56hrxJF5RwMBlBCfwzHKlFUzvFYaWpaGx1GhvdQUFYqJZW0RDmniCddL+r4E8PvxnTyIj3Pg/lcub+EbpEn6fprh0/oC08vABOqE2V3lhp7EfuQbv0INLZIgRbIZWqMKjmVN35Ukakwm6bGk+v0m4Y6ap/Ny4gWvYDNrUCKxZo7GYHURNfIKbILxaKsqEHu+FzWEnlk00xDEr0D6cV+wsc9RhgQAfPwj5EwC+T/8gxJTVh/z3QVs1ksD9YLgugO3yXzBhSLYt6QZz7fUFGGadHzpD3bgvVnZ8lQd3/ycZm1wA8lSx8H/qaRcAAAAABJRU5ErkJggg==" alt="share" class="calculator__img">
+  </div>
+
+   <input type="text" class="calculator__input calculator__input--second" placeholder="Введіть друге число">
+    
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAYAAAB2+A+pAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG9SURBVHgBvZY/TsMwFMZfQ4YOHTIwMDBk4ABwApQNCS7AlC4cgBu0IxsSI0MuAHtXBjYkOjAwICVCDB2QikSHDJXK++izcB0lMamTn/Qp9ovsz89/4hBVE7CGrISVsuaslaFneR+TA2A4KjGqUirtGhFKB6stlEo/1hzS/7Ms01z6s8rUlaluHtYZp45N9WnfLTMdtWSqdMsadJmt0jfrhNVXhh6tz2lI7YJsj0nbbJ4EugCmyDhUxlZb3pEx2Gf5PtmetTCkJEkK8SiKyBK1ueAZ9Gi9+F2hRjmD+xetv821IGuTLMuoAYG1cRAEFMdxIT4ej8mSN63sY6qxcENqnwnrSlWwqx+oG6Z6BRljmlOyXOeGzFjnWn2BjLHG19QuE6O+6EkB2eIXJiT3mNmCV08KyDqSp0sWrEsjlmMwnhbIHJsr05kR/617RhA770gGsQ3o/II2zy7IVd+9koa4RW5YZ6w9sgdZ3rHupayzZD2JeakxwEcdF8ipPA9EphE0FT1S0VCZTvV3VcagT3/3aFNyMc314E5NI4z0QxuET/ag7TvrRcob1GVsgvXGmR9Q8edtKcKp+JTnsqyjHxv35FulWTeBAAAAAElFTkSuQmCC" alt="will-be" class="calculator__img">
+    
+    <input type="text" class="calculator__input calculator__input--result" placeholder="Результат">
+</div>
+
+    </div>
+</section>
+
+    
+    <section class="calculatetime">
+  <div class="container calculatetime__div">
+    <h2 class="calculatetime__title theme-text">Калькулятор часу</h2>
+    <div class="calculatetime__search-row">
+      <div class="calculatetime__search">
+        <input class="calculatetime__input" id="numInput" type="text" placeholder="Введіть число">
+        <button class="calculatetime__btn" id="searchBtn" type="submit"><svg class="calculatetime__icon" width="20" height="20" viewBox="0 0 24 24"><path fill="white" d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg></button>
+      </div>
+      <div class="calculatetime__separator"></div>
+      <div class="calculatetime__timer theme-text" id="time">00:00</div>
     </div>
   </div>
 </section>
 
+    
+<section class="dino" id="dino">
+  <div class="container">
+    <div class="dino__border"></div>
+    <h3 class="dino__title theme-text">Google динозавр</h3>
+    <p class="dino__points theme-text"><span id="points">00000</span></p>
+    <div class="dino__game">
+      <div class="dino__dino theme-dino"></div>
+      <div class="dino__cactus theme-dino"></div>
+    </div>
+    <p class="dino__text"></p>
+    <button class="dino__start">Старт</button>
+  </div>
+</section>
+
+    
+<section class="football-section">
+    <div class="container">
+  <h2 class="football-title theme-text">Футбол</h2>
+  <div id="football-field">
+    <div id="ball"></div>
+    <div id="goal" class="goal"></div>
+    <div id="goal" class="goal"></div>
+  </div>
+  <p id="football-score">Рахунок: 0</p>
+  </div>
+</section>
+
+    
+<section class="threenumber-section">
+    <div class="container">
+  <h2 class="threenumber-title theme-text">Введіть 3 числа</h2>
+  <div class="threenumber-content">
+    <input id="num1" type="number" class="input-one"/>
+    <input id="num2" type="number" class="input-one"/>
+    <input id="num3" type="number" class="input-one"/>
+  </div>
+  <p>
+    Найбільше число, яке ви ввели :
+    <span id="threenumber-result">(число)</span>
+  </p>
+  </div>
+</section>
+
+    
+<section class="ourteam-section">
+    <div class="container">
+  <h2 class="ourteam-title theme-text">Наша команда</h2>
+  <div class="slider">
+    <div class="arrow" id="prev">⬅</div>
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="../img/illia.png" alt="Розробник" />
+        <h3>Illia Krasovskiy</h3>
+      </div>
+      <div class="slide">
+        <img src="../img/kamcukonovich.png" alt="Розробник" />
+        <h3>Arsenii Vdovychenko</h3>
+      </div>
+      <div class="slide">
+        <img src="../img/nazar.png" alt="Тім лід, розробник" />
+         <h3>Nazar Bekerskii</h3>
+      </div>
+      <div class="slide">
+        <img src="../img/nikita.png" alt="Розробник" />
+        <h3>Nikita Prohorenko</h3>
+      </div>
+    </div>
+    <div class="arrow" id="next">➡</div>
+  </div>
+  </div>
+</section>
+
+    
+<section class="choose">
+  <div class="container">
+    <h2 class="choose__title theme-text ">Обери вченого/их</h2>
+    <ul class="choose__list"></ul>
+    <ul class="choose__items">
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="19st">
+          отримати масив вчених що народилися в 19 ст
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="someYears">
+          знайти суму років скільки прожили всі вченні
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="alphabet">
+          Відсортувати вчених по алфавіту
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="agePast">
+          Відсортувати вчених по кількості прожитих років
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="youngest">
+          Знайти вченого який народився найпізніше
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="albert">
+          Знайти рік народження Albert Einstein
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="letterC">
+          знайти вчених прізвище яких починається на літеру С
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="findOLd">
+          Знайти вченого який прожив найбільше і вченого який прожив найменьше
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="sameName">
+          Знайти вчених в яких співпадають перші літери імені і прізвища
+        </button>
+      </li>
+      <li class="choose__elem">
+        <button type="button" class="choose__btn" data-action="work19st">
+          Дізнатися чи всі вченні працювали в 19 столітті
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    
+<section>
+    <footer class="footer">
+    <div class="container">
+        <a href="" class="footer__link">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAnCAYAAAB5XdqFAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAI5SURBVHgB7ZjfTeNAEId/yl0BuQ58D3m+dJB9zBt0gDvIXQUHFQAVeDqADggVAE+R8pJQAZAGzAw7K0wUkv0zCiDxSSM7y6z5sh7vbvwDtlxx3HMs8cmp4WW/BCL6d8vfHccQH0SlAZU4lZP5fN7MZjPXaZcvcdPJjeYnbDjkmOj5lOOEJYdt29a9Xm/Jn/scDccxxzkysBI905BRG6mYHMGiUz7ccfzmeEQmPdghcjKyjuNWzx8Hg8E1H/9zPMDf+onmJmElKlJSe384/knDarVyfOun8PUoU9Yv+FGvckStkBEbdT47jnY8Hh/BSy207dMhT32L12moxh7nVxmZKjJXymCx1iaiB5nXi0ZG5kFjFxX8aDZr7X28rc2FXs9s8g+S8s9PI/IPNfdgRx5pnolsV7KJ7NNofhWRSzCQzZEU5JbeJOQTCmRzJYeIL5EuhAzZXEmh1n4jpENIkC2RFC60by6ECNlSSeB1PS+BsEXWQtJp/wnKIWyQtZAUJni7bJZCWJNdaMMFyrhC3MqVQqj5l+sSyifdPmy+bJeNKyKhTNZp/yPYsLUcCfmyYVtXoZyoZ4aQJ7tpW5dD0oNNSJOtYi+8g6zZhxAvWyNuW7eNoimSECcbtnW5P9hM5nHCblmpzdxl02qxeYHwvmzuti70NZMMEDorRIewbI6QTlgRoyRjX+nU8JLLtXYH/5rmGulcat8T7AGLbV0UJa90HPyTfok9UCIa6jLntidTIvoEX7O3+OYL8gzSWdmGNbs0fgAAAABJRU5ErkJggg==" alt="" class="footer__logo">
+        <ul class="footer__list">
+            <h2 class="footer__coding">Coding</h2>
+            <h3 class="footer__magic">Magic</h3>
+        </ul>
+        </a>
+        
+        <ul class="footer__contact"> 
+            <li class="footer__item">
+                <a href="mailto:codingmagic@gmail.com" class="footer__email">E-Mail: codingmagic@gmail.com</a>
+            </li>
+             <li class="footer__item">
+                <a href="tel:+381234567890" class="footer__phone">Тел: +38 (123) 456 78 90</a>
+            </li>
+            <li class="footer__item">
+                <a href="#">Facebook: CodingMagic</a>
+            </li>
+            <li class="footer__item">
+                <a href="#">Twitter: CodingMagic</a>
+            </li>
+            <li class="footer__item">
+                <a href="#">Instagram: CodingMagic</a>
+            </li>
+        </ul>
+        <div class="footer__subscribe">
+            <div>
+            <input type="email" placeholder="Ваша ел. адреса..." class="footer__input">
+            <button class="footer__btn" id="subscribeBtn">Підписатись</button>
+            </div>
+            <p class="footer__note">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
+        </div>
+    </div>
+    </footer>
+</section>
+
+    
+    <section class="header-modal">
+        <div class="header-modal__overlay">
+
+
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACESURBVHgBnZLbDYAgDEVvdAFHcARGcRNXuBs5j1/++qcjWBNIUIS2NikBknN4tD2ARXKV3OELSgbEYUsLB3wzY9rwSPiGPRLWYIuEGtyS0Ap/SeiFc8mhwV1DMEmecT7AGcxOdvcJUV7bLCHqb1YlhP7bVQlhL1UhIfx1fkhm/GiSCIcLd98oaxPbVlkAAAAASUVORK5CYII=" alt="X" class="header-modal__img">   
+
+        
+
+
+
+
+
+        <div class="header-modal__hellow">
+       <h2 class="header-modal__title">Привіт!</h2>
+       <p class="header-modal__text">Ви потрапили на сайт інтерактивних ігор та завдань</p>
+       <p class="header-modal__text">Надіємось, що вам сподобається і ви отримаєте позитивні емоції!</p>   
+       <p class="header-modal__text">Бажаємо Вам гарно провести час!</p>
+    </div>
+
+
+    <div class="header-modal__form">
+                <p class="header-modal__label">Введіть своє ім'я:</p>
+                <input type="text" class="header-modal__input" placeholder="Ваше ім'я...">
+                <button type="button" class="header-modal__btn">Зберегти</button>
+            </div>
+
+            <div class="header-modal__box">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFWSURBVHgB7Za9TsMwFIUPENLCzsAD8ChMbIgNQSVegRmJhZ+XYGtp4ZUQRcxMTAhIKu6R71VNlLZpamdoe6RTy07kL+faTgOsmjYQR3fi78LYlvhW/MVOgvAaiT/FmfYZble8o/0r/mwirAh9F++p98WX4lQfJLcbQ4INeqAQVvNU/CC+gKtCcBH6hvHSse3oA5zDre+H+BoBVQWK0GBChxWgbH/ENwigqknZvur9a2ipePDb4iMPMs+aDlET2oLbEDz0J2iovIlO+Az3ErCXQ7SkprZO+ije1slzhaWxoCYr9VMBfh8TStk6ZwX4SOFpTCgT91CevKP9YOfUhw7g/sEmlf0lJtRUBif0GAt+UEyD2vUu/q/5GVzyQ9RUFehAr/vJ++JfHastJunOgNpOtt2eeWO1RFgf40TToKYECyYtg7RmQIPLh/Wagvpwlj1vEurDl1N/Z0CIWXCsSbEAAAAASUVORK5CYII=" alt="sword" class="header-modal__decoret header-modal__decoret--top-left">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIiSURBVHgBtVa5SgRBEH2zO4IamayC/oGZIGLsD/gTmojgiYmipmpq4EeYCB4oGqngopGhgiZemQd4u45VTLfT29s9073Hg8fsVlfV67MoIMY9MWoQb2ABDwwZ7AHqg2HioylfpHyniNMGmw9kvKSqYRTWUa8VGzVC4jfs4vXCL1xm0wBUaOSQjUD7mmzex5IlzAkLKL8oQOWTKaAK8bTL1S7G21GeeJy4gXjiNp9MjchTNBD2vIOvt3AhJVE/8QH2iXa4aIQwI+3seYsHU8ZLcITPVueFLXDwzdJwvlwsyqsd9xT1FtYT23yzRFGNsBTXv4HFxxYb6X4ulSsyBM8hrr+ygKwgeV5q7mUxLn3npV8IP3AQNw3XxBbip7BvE5/EBHJCaIZ4Qmwi/ogJHxJHiJ3qSlwwSzxCslNTSLZ+n3hGXCSeEzctfqfiv5dwhPIzVmNDmI9F92smvuhGF2GG7DLekHQp+n3Jwd7NRGoyV+FQ+89QdyGtgAS1CO8hXg0nmUSSzLY61Y/jNqsVviOuw9wY6L91bBFvOY/LO9bBT2FXsxWRvGn1fR8jOXue0A6xSwaV4N49mHZnAHHDaKpmz8Q+Ux6+KBNilv9VxYJ3g41Xc4D47S4YxtcQ70YeWqfJgavEbiTv0MZQWYn8jiGuYrDEfBAviaOooTHkgCvikvjdBreLmRN+rSKOy2oRnpAljxO9EnuQvQIW7iV+ibgLjvkDTNLFCshs33EAAAAASUVORK5CYII=" alt="game-development" class="header-modal__decoret header-modal__decoret--top-right">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH6SURBVHgBzZY9LARBFMffOZ8RJBoanYJCRBQalUoUFIIQEURCoidH4k6nUqs0PhIKiUYtKoUoNRKKI6EQIs4R3Po/M5vMzd6c27lb55/8srtv5+vNe/N2iQqnMGgFd+ADxEEbKKWA1QUc0CSfm+VzBwWsFGjUbA0gSQHL8WO33f9qMKIMmpT3teBZaVclr+OgTLEnbCdeBP3gXLHtkNe7CrANehQbL3KOLBUFMbKXU0JFUraJQ4b7QCfmifZIxIzhOOn5wIk0TaJo/LYw9/0A6DVNzI0SJJIgJHkFD0r7NxKZ2g1OZXuTE2wfkg7MS1KZGnIFilO6F9z5BrQoiwsp95vghMyeOxn6eRSV6IqBFTLLVED46GzpRo7bKKjU7GNgVXnmVfK5PQBTip13YpfE1ptUAx51Iw/I+72hTX4PIlq7dVCn2drBEXgBw6CTvJ7zxFzNwqTF1rRF2cTbxzHdB09yDFPseFeWZRu+LlEeBYS/OvzdZU9n5OAmB9jLNRLHrx6Uuy9sPC5KyeQ+Bfmr8OMxJwhn6DtYIHs5IcqeGKrY00NwDW5JxM1WP9ntx2O1AuUlmxi7u/SnE1+SOIdhSl+Ilfys3vX2GEyAMzBLFvJ7LBzZZxD0gSvy/tLmJJsYf5EolZPggiz1L/+5ctEnWapUds7neETIQt8O7GgM7G8fuwAAAABJRU5ErkJggg==" alt="puzzle" class="header-modal__decoret header-modal__decoret--bottom-left">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGCSURBVHgB5VexTsMwEH02CIkNGMmGxMiPMPMXLDDRX2BAiF/gV9hgQoIJBhASEl0QExGEljv7TJw2pnViM9CTnlI7Ob97d/apBgBN2CeUhHFmfBIGwml+VIRR5CJfgljySoSaKHhiE3HmFoqxQgSWynNWiLNefhppjYM4JgwJd4Q9/BJYl5SF/EZo7hWu5yWaAn/8UhCzqmshfSSsEXZQb8DdXMRArdRXtyVzD5N+KWusvACcDeW5OvlxKmImfRfSQxkzbmAVnrc5pUo1p5XrWcm8v9GybS62JcI2mrv6HtPHybz7Nw1kbluWp0tPjPkpjfXTTnGXGveyxatxiFgFntmJr2Abwbp847pSduIL2Fq8EF4JK7BdKanytiPBAZ14794wHWTvjhci5v9irt9y2jfQVJyF+EkImfzMC6J1gVTErOqA8AyrnHFKuMUfKFYzxiG/uYk12p3HM8Z9zRB/yMIF8luB+hZirhPuNhF7hakifdwJOWJirt+gI3ksShGqvwFtAwPI6t8q9gAAAABJRU5ErkJggg==" alt="tic-tac" class="header-modal__decoret header-modal__decoret--bottom-right">
+            </div>
+
+
+
+        </div>
+    </section>
+
+    
+<div class="modal" id="modal">
+  <div class="modal__content">
+
+    <button class="modal__close" id="closeModal">✕</button>
+
+    <div class="modal__icons">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFWSURBVHgB7Za9TsMwFIUPENLCzsAD8ChMbIgNQSVegRmJhZ+XYGtp4ZUQRcxMTAhIKu6R71VNlLZpamdoe6RTy07kL+faTgOsmjYQR3fi78LYlvhW/MVOgvAaiT/FmfYZble8o/0r/mwirAh9F++p98WX4lQfJLcbQ4INeqAQVvNU/CC+gKtCcBH6hvHSse3oA5zDre+H+BoBVQWK0GBChxWgbH/ENwigqknZvur9a2ipePDb4iMPMs+aDlET2oLbEDz0J2iovIlO+Az3ErCXQ7SkprZO+ije1slzhaWxoCYr9VMBfh8TStk6ZwX4SOFpTCgT91CevKP9YOfUhw7g/sEmlf0lJtRUBif0GAt+UEyD2vUu/q/5GVzyQ9RUFehAr/vJ++JfHastJunOgNpOtt2eeWO1RFgf40TToKYECyYtg7RmQIPLh/Wagvpwlj1vEurDl1N/Z0CIWXCsSbEAAAAASUVORK5CYII=" alt="" class="modal__icon">
+      <img src="../img/game-development.png" alt="" class="modal__icon">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH6SURBVHgBzZY9LARBFMffOZ8RJBoanYJCRBQalUoUFIIQEURCoidH4k6nUqs0PhIKiUYtKoUoNRKKI6EQIs4R3Po/M5vMzd6c27lb55/8srtv5+vNe/N2iQqnMGgFd+ADxEEbKKWA1QUc0CSfm+VzBwWsFGjUbA0gSQHL8WO33f9qMKIMmpT3teBZaVclr+OgTLEnbCdeBP3gXLHtkNe7CrANehQbL3KOLBUFMbKXU0JFUraJQ4b7QCfmifZIxIzhOOn5wIk0TaJo/LYw9/0A6DVNzI0SJJIgJHkFD0r7NxKZ2g1OZXuTE2wfkg7MS1KZGnIFilO6F9z5BrQoiwsp95vghMyeOxn6eRSV6IqBFTLLVED46GzpRo7bKKjU7GNgVXnmVfK5PQBTip13YpfE1ptUAx51Iw/I+72hTX4PIlq7dVCn2drBEXgBw6CTvJ7zxFzNwqTF1rRF2cTbxzHdB09yDFPseFeWZRu+LlEeBYS/OvzdZU9n5OAmB9jLNRLHrx6Uuy9sPC5KyeQ+Bfmr8OMxJwhn6DtYIHs5IcqeGKrY00NwDW5JxM1WP9ntx2O1AuUlmxi7u/SnE1+SOIdhSl+Ilfys3vX2GEyAMzBLFvJ7LBzZZxD0gSvy/tLmJJsYf5EolZPggiz1L/+5ctEnWapUds7neETIQt8O7GgM7G8fuwAAAABJRU5ErkJggg==" alt="" class="modal__icon">
+      <img src="../img/tic-tac-toe.png" alt="" class="modal__icon">
+    </div>
+
+    <h2 class="modal__title">Дякую за підписку!</h2>
+
+  </div>
+</div>
+
+    
+    
 
     
   </body>
